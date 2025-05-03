@@ -1,0 +1,26 @@
+{
+  "name": "cacdia.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev pages",
+    "docs:build": "vitepress build pages",
+    "docs:preview": "vitepress preview pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cacdia/cacdia.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cacdia/cacdia.github.io/issues"
+  },
+  "homepage": "https://github.com/cacdia/cacdia.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
