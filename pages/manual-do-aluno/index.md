@@ -22,10 +22,3 @@ Este manual foi desenvolvido pelo Centro Acadêmico de Ciência de Dados e Intel
 
 Utilize o menu lateral para navegar pelas diferentes seções do manual.
 
-::: tip DICA
-Mantenha-se atualizado sobre as datas importantes consultando regularmente o [Calendário Acadêmico](/manual-do-aluno/calendario).
-:::
-
-::: info CONTATO
-Para dúvidas específicas, entre em contato com o CACDIA através do nosso [email](mailto:contato@cacdia.org) ou redes sociais.
-:::

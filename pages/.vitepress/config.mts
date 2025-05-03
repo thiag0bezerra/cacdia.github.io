@@ -24,10 +24,12 @@ export default defineConfig({
           text: 'Manual do Aluno',
           items: [
             { text: 'Visão Geral', link: '/manual-do-aluno/' },
+            { text: 'Ingresso', link: '/manual-do-aluno/ingresso' },
             { text: 'Calendário Acadêmico', link: '/manual-do-aluno/calendario' },
             { text: 'Auxílios Estudantis', link: '/manual-do-aluno/auxilios-estudantis' },
-            { text: 'Ingresso', link: '/manual-do-aluno/ingresso' }
-
+            { text: 'Centro de Informática', link: '/manual-do-aluno/centro-informatica' },
+            { text: 'Opções de Alimentação', link: '/manual-do-aluno/opcoes-alimentacao' },
+            { text: 'Transporte entre Unidades', link: '/manual-do-aluno/transporte' },
           ]
         }
       ],
