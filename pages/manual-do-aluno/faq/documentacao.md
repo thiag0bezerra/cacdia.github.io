@@ -1,101 +1,72 @@
 ---
-title: FAQ - Documentação
-description: Perguntas frequentes sobre documentação e certificados acadêmicos
+title: FAQ - Documentação (atualizado)
+description: Perguntas frequentes sobre documentação e certificados acadêmicos no curso de Ciência de Dados e Inteligência Artificial (UFPB) – informações revisadas em 2025.
 ---
 
 # Perguntas Frequentes: Documentação
 
-Esta seção contém respostas para as perguntas mais comuns que os alunos têm sobre documentação e certificados acadêmicos no curso de Ciência de Dados e Inteligência Artificial.
+Esta seção atualizada contém respostas para as perguntas mais comuns que os alunos têm sobre documentação e certificados acadêmicos no curso de Ciência de Dados e Inteligência Artificial.
 
-## Perguntas Comuns
+## “Como tirar carteirinha de estudante?”
 
-### "Como tirar carteirinha de estudante?"
+A carteirinha de estudante pode ser obtida por três vias principais:
 
-A carteirinha de estudante (Carteira de Identificação Estudantil) pode ser obtida por diferentes meios:
+1. **Carteirinha UFPB (emitida pelo DCE)**  
+   - **Onde e quando**: na sede do Diretório Central dos Estudantes (DCE), Centro de Vivência do Campus I – João Pessoa.  
+   - **Valor**: R\$ 25,00 (um dos mais acessíveis do estado) 
+   - **Benefícios**: meia-entrada em cinemas, teatros e eventos; meia-passagem intermunicipal e nas linhas metropolitanas de João Pessoa 
+   - **Cronograma de emissão (2025)**:  
+     - 18 mar: Campus III (Bananeiras)  
+     - 19 mar: Campus II (Areia)  
+     - 26–27 mar: Campus IV (Rio Tinto e Mamanguape) 
+   - **Documentos necessários**: RG, CPF, comprovante de matrícula e foto 3×4 (além de comprovante de residência para algumas modalidades, conforme o formulário de solicitação) 
 
-**1. Através da UFPB:**
-- A universidade disponibiliza a carteira institucional para todos os alunos
-- Normalmente, o processo é iniciado no período de matrícula dos calouros
-- Veteranos podem solicitar a carteira na Pró-Reitoria de Graduação
+2. **Carteira Nacional do Estudante (DNE/CIE) pela UNE/UBES/ANPG**  
+   - **O que é**: documento oficial unificado pela Lei 12.933/2013, válido até 31/03/2026, para meia-entrada em todo o país 
+   - **Como solicitar**: via portal da UNE – preencher formulário online, pagar taxa de R\$ 45,00 + frete e enviar fotos dos documentos (RG, CPF, comprovante de matrícula, foto 3×4) 
 
-**2. Pela UNE (União Nacional dos Estudantes):**
-- Acesse o portal da UNE: [https://www.une.org.br/](https://www.une.org.br/)
-- Siga as instruções para solicitar a carteira nacional
-- É necessário pagar uma taxa anual
+3. **ID Jovem (gratuita)**  
+   - **Público-alvo**: jovens de 15 a 29 anos com renda familiar de até 2 salários mínimos, cadastrados no CadÚnico 
+   - **Benefícios**: meia-entrada em eventos artístico-culturais e esportivos; vagas gratuitas ou com desconto no transporte coletivo interestadual 
+   - **Emissão**: pelo site/app ID Jovem (juventude.gov.br/idjovem).  
+   - **Retirada gratuita no DCE**: apresentar ID Jovem, folha-resumo do CadÚnico, documento com foto e declaração de vínculo 
 
-**3. ID Jovem (para estudantes de baixa renda):**
-- Gratuita para estudantes entre 15 e 29 anos com renda familiar de até 2 salários mínimos
-- Solicite pelo aplicativo ID Jovem ou no site: [https://idjovem.juventude.gov.br/](https://idjovem.juventude.gov.br/)
+---
 
-**Documentos necessários (para qualquer opção):**
-- Comprovante de matrícula atualizado
-- Documento de identidade com foto
-- CPF
-- Foto recente
-- Comprovante de residência (para algumas modalidades)
+## “Como pedir atestado de matrícula?”
 
-### "Como pedir atestado de matrícula?"
+O atestado de matrícula (ou declaração de vínculo) é emitido instantaneamente pelo SIGAA:
 
-O atestado de matrícula pode ser obtido diretamente pelo SIGAA:
+1. **Acesse**: [https://sigaa.ufpb.br](https://sigaa.ufpb.br) e faça login com seu usuário (número de matrícula) e senha.  
+2. **Navegue até**: **Portal do Discente (Graduação)** → **Ensino** → **Documentos** → **Atestado de Matrícula** (ou **Declaração de Vínculo com a Instituição**).  
+3. **Gere o PDF**: o documento sai com assinatura eletrônica e código de autenticação para validação online. 
 
-**Procedimento:**
-1. Acesse o SIGAA com seu login e senha
-2. Vá para "Portal do Discente" → "Ensino" → "Documentos" → "Declaração de Vínculo"
-3. O sistema gerará um PDF com a declaração
-4. O documento possui código de autenticação digital para verificação de sua validade
+> **Dica**: se for exigida assinatura física ou carimbo, emita normalmente, imprima e leve à coordenação de curso para rubrica.
 
-**Características do documento:**
-- É emitido instantaneamente
-- Tem validade oficial
-- Inclui informações como período atual, curso e status da matrícula
-- Pode ser validado pelo código no rodapé do documento
+---
 
-::: tip DICA
-Para alguns fins específicos (como estágio), pode ser necessária uma declaração especial. Nestes casos, consulte a coordenação do curso.
-:::
+## “Qual o modelo de documento para [processo]?”
 
-### "Qual o modelo de documento para [processo]?"
+A UFPB disponibiliza **modelos padronizados** para diversos requerimentos acadêmicos:
 
-A UFPB disponibiliza modelos de documentos para diversos processos acadêmicos:
+- **Onde encontrar**: no site da Pró-Reitoria de Graduação (PRG), seção **Documentos** → **Formulários, Requerimentos e Informes**:  
+  https://www.prg.ufpb.br/prg/codesc/documentos/formularios 
+- **Processos comuns**: aproveitamento de disciplinas, trancamento de matrícula, abono de faltas, revisão de nota, quebra de pré-requisito, regime especial, segunda chamada, entre outros.
+- **Requerimentos integrados ao SIGAA**: vários processos (ex.: pedido de segunda chamada) já possuem modelo direto no sistema, acessível ao discente.
 
-**Onde encontrar modelos:**
-- **Site da PRG**: [https://www.prg.ufpb.br/](https://www.prg.ufpb.br/) na seção "Formulários"
-- **Página da Coordenação**: No site do Centro de Informática, na área da coordenação do curso
-- **SIGAA**: Alguns requerimentos já possuem modelos integrados ao sistema
+> Se não encontrar o formulário específico, entre em contato com a coordenação do curso pelo e-mail: [graduacao@ci.ufpb.br](mailto:graduacao@ci.ufpb.br).
 
-**Processos comuns e seus modelos:**
-- Aproveitamento de disciplinas
-- Trancamento de matrícula
-- Abono de faltas
-- Revisão de nota
-- Quebra de pré-requisito
-- Regime especial (para gestantes, militares, etc.)
-- Solicitação de segunda chamada
+---
 
-Se não encontrar o modelo que precisa, entre em contato com a coordenação do curso pelo e-mail [graduacao@ci.ufpb.br](mailto:graduacao@ci.ufpb.br).
+## “Como conseguir comprovante de [situação]?”
 
-### "Como conseguir comprovante de [situação]?"
+Para obter diversos comprovantes acadêmicos, utilize o SIGAA:
 
-Para obter comprovantes específicos sobre sua situação acadêmica:
+- **Histórico Escolar**: **Portal do Discente** → **Ensino** → **Emitir Histórico Escolar**.  
+- **Declaração de Vínculo**: **Portal do Discente** → **Ensino** → **Documentos** → **Declaração de Vínculo com a Instituição**.  
+- **Comprovante de Matrícula**: **Portal do Discente** → **Ensino** → **Comprovante de Matrícula**.  
+- **Declaração de Integralização** (para concluintes): **Portal do Discente** → **Ensino** → **Documentos** → **Declaração de Integralização Curricular**. 
 
-**Documentos disponíveis diretamente no SIGAA:**
-- **Histórico Escolar**: Portal do Discente → Ensino → Emitir Histórico
-- **Declaração de Vínculo**: Portal do Discente → Ensino → Documentos → Declaração de Vínculo
-- **Comprovante de Matrícula**: Portal do Discente → Ensino → Comprovante de Matrícula
-- **Declaração de Integralização**: Para concluintes, após integralização do curso
+Para documentos **especiais** (performance, situação específica, declaração em língua estrangeira etc.), envie e-mail à coordenação ([graduacao@ci.ufpb.br](mailto:graduacao@ci.ufpb.br)), indicando: nome completo, matrícula, curso, documento e finalidade. O prazo usual de emissão é de **2 a 5 dias úteis**.
 
-**Documentos que precisam ser solicitados à coordenação:**
-- Declarações específicas não disponíveis no sistema
-- Documentos com informações detalhadas sobre desempenho ou situação especial
-- Declarações em língua estrangeira para intercâmbio
-- Comprovantes com detalhamento de carga horária ou conteúdo programático
-
-**Procedimento para solicitar documentos especiais:**
-1. Envie e-mail para a coordenação [graduacao@ci.ufpb.br](mailto:graduacao@ci.ufpb.br)
-2. Especifique exatamente qual documento precisa e para qual finalidade
-3. Forneça seu nome completo, matrícula e curso
-4. Aguarde o prazo informado pela coordenação (geralmente de 2 a 5 dias úteis)
-
-::: warning ATENÇÃO
-Alguns documentos podem requerer assinatura de coordenadores ou diretores e, portanto, têm prazos mais longos para emissão. Planeje-se com antecedência.
-:::
+> **Atenção**: alguns documentos exigem assinatura de coordenador ou diretor e, portanto, podem levar mais tempo. Planeje-se com antecedência.
