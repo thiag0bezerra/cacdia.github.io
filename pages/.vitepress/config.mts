@@ -31,6 +31,21 @@ export default defineConfig({
             { text: 'Opções de Alimentação', link: '/manual-do-aluno/opcoes-alimentacao' },
             { text: 'Transporte entre Unidades', link: '/manual-do-aluno/transporte' },
           ]
+        },
+        {
+          text: 'Perguntas Frequentes',
+          items: [
+            { text: 'Professores e Disciplinas', link: '/manual-do-aluno/faq/professores-disciplinas' },
+            { text: 'Processos Administrativos', link: '/manual-do-aluno/faq/processos-administrativos' },
+            { text: 'Grupos de Disciplinas', link: '/manual-do-aluno/faq/grupos-disciplinas' },
+            { text: 'Horários e Locais', link: '/manual-do-aluno/faq/horarios-locais' },
+            { text: 'Avaliações e Provas', link: '/manual-do-aluno/faq/avaliacoes-provas' },
+            { text: 'Requisitos Acadêmicos', link: '/manual-do-aluno/faq/requisitos-academicos' },
+            { text: 'Estágio e TCC', link: '/manual-do-aluno/faq/estagio-tcc' },
+            { text: 'Infraestrutura e Serviços', link: '/manual-do-aluno/faq/infraestrutura-servicos' },
+            { text: 'Gestão Acadêmica', link: '/manual-do-aluno/faq/gestao-academica' },
+            { text: 'Documentação', link: '/manual-do-aluno/faq/documentacao' },
+          ]
         }
       ],
       '/guias/': [
