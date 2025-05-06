@@ -57,4 +57,4 @@ Parabéns pela sua aprovação! Este vai orientá‑lo, passo a passo, na matrí
 
 ---
 
-Em caso de dúvidas, entre em contato com a coordenação do seu curso por e‑mail ou telefone. Desejamos um excelente começo de sua vida acadêmica na UFPB!  
+Em caso de dúvidas, entre em contato com a coordenação do seu curso por e‑mail ou telefone. Desejamos um excelente começo de sua vida acadêmica na UFPB!

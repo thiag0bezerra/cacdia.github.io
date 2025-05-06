@@ -32,7 +32,7 @@ O Centro de Informática (CI) da UFPB é um órgão acadêmico voltado ao desenv
 O Centro de Informática está situado no **Campus Mangabeira**, em João Pessoa – PB.
 
 * **Endereço:** Rua dos Escoteiros, s/n – Mangabeira, João Pessoa – PB – CEP 58058‑600
-* **Contato:** (83) 3216‑7506 / 3216‑7567 · [graduacao@ci.ufpb.br](mailto:graduacao@ci.ufpb.br)
+* **Contato:** +55 (83) 3216‑7567 · [secretaria@ci.ufpb.br](mailto:secretaria@ci.ufpb.br)
 * **Google Maps:** [Abrir localização no mapa](https://maps.app.goo.gl/BYP3z1GvpJPd7C548)
 
 ::: info DETALHE

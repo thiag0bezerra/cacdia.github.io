@@ -20,19 +20,18 @@ Não, o trancamento de disciplina ou de período não afeta o cálculo do Coefic
 
 **Para trancar disciplina (trancamento parcial):**
 1. Acesse o SIGAA com seu login e senha
-2. Vá para "Portal do Discente" → "Ensino" → "Solicitar trancamento de turma"
+2. Vá para "Portal do Discente" → "Ensino" → "Trancamento de Componente Curricular" → "Trancar"
 3. Selecione a(s) disciplina(s) que deseja trancar
 4. Confirme a solicitação e guarde o comprovante
 
 **Para trancar o período (trancamento total):**
 1. Acesse o SIGAA com seu login e senha
-2. Vá para "Portal do Discente" → "Ensino" → "Solicitar trancamento de período"
+2. Vá para "Portal do Discente" → "Ensino" → "Trancamento de Programa" → "Solicitar Trancamento"
 3. Preencha a justificativa solicitada
 4. Confirme a solicitação e guarde o comprovante
 
 **Prazos importantes:**
-- O trancamento parcial pode ser realizado até o período definido no calendário acadêmico (geralmente antes da metade do semestre)
-- O trancamento total pode ser solicitado até o último dia do período letivo
+- Tanto o trancamento parcial quanto o total só são permitidos **durante a primeira metade do período letivo**, conforme prazo definido no Calendário Acadêmico
 - Verifique o [Calendário Acadêmico](/manual-do-aluno/calendario) para os prazos exatos
 
 ### "Como aproveitar [estágio/monitoria/projeto] como horas flexíveis/complementares?"
@@ -89,24 +88,24 @@ De acordo com a regulamentação da UFPB:
 
 ### "Como transferir de curso ou instituição?"
 
-De acordo com o Regulamento Geral de Graduação (Arts. 100-119), existem diferentes formas de ingressar ou mudar de curso:
+De acordo com o Regulamento Geral de Graduação (Resolução CONSEPE nº 29/2020), existem diferentes formas de ingressar ou mudar de curso:
 
 **Reopção de Curso (mudança entre cursos da UFPB):**
-- Permitida apenas uma única vez na graduação (Regulamento Geral de Graduação, Art. 100)
+- Permitida apenas uma única vez na graduação
 - Requisitos mínimos:
-  - CRA mínimo de 5,0 (cinco)
-  - Ter integralizado entre 12% e 50% da carga horária do curso de origem
+  - **Não há exigência de CRA mínimo**
+  - Ter **integralizado pelo menos 15% da carga horária** mínima do curso de origem e possuir **vínculo ativo por, no mínimo, dois períodos letivos**
 - A solicitação é feita via edital específico (PSRC) publicado pela PRG
 
 **Transferência Voluntária (de outra instituição para a UFPB):**
-- Para alunos de cursos reconhecidos pelo MEC (Regulamento Geral de Graduação, Art. 104)
+- Para alunos de cursos reconhecidos pelo MEC
 - Requisitos mínimos:
   - Ter cursado entre 25% e 50% da carga horária total do curso na instituição de origem
   - A classificação é feita com base na nota do ENEM
 - A solicitação é feita via edital específico (PSTV) publicado pela PRG
 
 **Reingresso (para alunos em situação de abandono):**
-- Permitido uma única vez (Regulamento Geral de Graduação, Art. 111)
+- Permitido uma única vez
 - Requisitos:
   - O abandono deve ter ocorrido há no máximo 5 períodos letivos
   - CRA igual ou superior a 5,0

@@ -28,21 +28,21 @@ Abaixo estão os horários atualizados do transporte entre as unidades Castelo B
 |---------|------|
 | **06:40** | Duas voltas apenas dentro da sede |
 | **07:20** | Saindo do CCHLA (sede) para o CI/CTDR |
-| **08:00** | Saindo do CI/CTDR para o CCHLA (sede) *apenas uma volta |
+| **08:00** | Saindo do CI/CTDR para o CCHLA (sede) |
 | **09:20** | Duas voltas apenas dentro da sede |
 | **10:20** | Duas voltas apenas dentro da sede |
 | **11:20** | Duas voltas apenas dentro da sede |
 | **12:20** | Saindo do CCHLA (sede) para o CI/CTDR |
-| **13:00** | Saindo do CI/CTDR para o CCHLA (sede) *apenas uma volta |
+| **13:00** | Saindo do CI/CTDR para o CCHLA (sede) |
 | **14:20** | Duas voltas apenas dentro da sede |
 | **15:20** | Duas voltas apenas dentro da sede |
 | **16:20** | Duas voltas apenas dentro da sede |
 | **17:20** | Duas voltas apenas dentro da sede |
 | **18:20** | Saindo do CCHLA (sede) para o CI/CTDR |
-| **19:00** | Saindo do CI/CTDR para o CCHLA (sede) *apenas uma volta |
+| **19:00** | Saindo do CI/CTDR para o CCHLA (sede) |
 | **20:20** | Uma volta apenas dentro da sede |
 | **21:30** | Saindo do CCHLA (sede) para o CI/CTDR |
-| **22:00** | Saindo do CI/CTDR para o CCHLA (sede) *apenas uma volta |
+| **22:00** | Saindo do CI/CTDR para o CCHLA (sede) |
 
 ## Pontos de Parada
 

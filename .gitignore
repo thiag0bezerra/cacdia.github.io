@@ -1,3 +1,4 @@
 node_modules/
 pages/.vitepress/cache
 pages/.vitepress/dist
+.vscode/mcp.json

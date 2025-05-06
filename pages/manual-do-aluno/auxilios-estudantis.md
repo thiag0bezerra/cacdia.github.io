@@ -28,7 +28,7 @@ Os seguintes auxílios encontram-se disponíveis para estudantes do Campus I:
 * **Auxílio Pagamento de Inscrição em Eventos**
 * **Apoio Emergencial** (para situações críticas e pontuais de vulnerabilidade socioeconômica)
 * **Bolsa Permanência do MEC**
-
+* **Apoio ao Estudante com Deficiência**
 
 ## Como Solicitar os Auxílios
 
@@ -38,19 +38,30 @@ O processo para solicitação dos auxílios compreende quatro etapas fundamentai
 
 * Acesse frequentemente o site oficial da PRAPE e acompanhe as comunicações oficiais enviadas por e-mail e redes sociais.
 
-### 2. Inscrição no SIGAA
+### 2. Adesão ao Cadastro Único
 
-* Acesse o sistema SIGAA: `SIGAA → Bolsas → Aderir ao Cadastro Único`.
-* Selecione o **Processo Seletivo** correspondente (ex.: “20/2024”).
-* Preencha cuidadosamente o **questionário socioeconômico** e anexe toda a documentação solicitada.
+* Acesse o sistema SIGAA: `SIGAA → Bolsas → Aderir ao Cadastro Único → **Selecionar Processo Seletivo**`.
+* Preencha cuidadosamente o **questionário socioeconômico**.
 
-### 3. Avaliação Socioeconômica
+### 3. Atualização dos Dados Bancários
+
+* Antes de solicitar qualquer auxílio, atualize seus dados bancários em:
+  `SIGAA → Outros → Meus Dados Pessoais` (no final do formulário).
+* Este passo é obrigatório para que o sistema libere a inscrição nos auxílios.
+
+### 4. Solicitação da Bolsa-Auxílio
+
+* Após completar os passos anteriores, solicite o auxílio desejado:
+  `SIGAA → Bolsas → Solicitação de Bolsas → Solicitação de Bolsa-Auxílio → **Selecionar Processo Seletivo**`
+* Nesta etapa, anexe toda a documentação solicitada no edital e clique em "Concluir".
+
+### 5. Avaliação Socioeconômica
 
 * Realizada pela equipe especializada do Serviço Social da PRAPE.
 * Datas das avaliações são previamente definidas no edital.
 * É permitido recurso em caso de indeferimento, via SIGAA, no prazo indicado.
 
-### 4. Assinatura do Termo de Compromisso
+### 6. Assinatura do Termo de Compromisso
 
 * Após aprovação, assine o Termo de Compromisso acessando: 
 `SIGAA → Bolsas → Solicitação de Bolsas → Assinar Termo de Compromisso.`

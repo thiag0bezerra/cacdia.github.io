@@ -15,7 +15,7 @@ Aqui você encontra as datas oficiais do calendário acadêmico da Universidade 
 
 | Data | Evento |
 |------|--------|
-| **28/04 a 13/05/2025** | Inclusão do plano de ensino pelo docente no SIG para o Período Letivo de 2025.1 *(Art. 30, Res. nº 29/20 Consepe)* |
+| **28/04 a 13/05/2025** | Inclusão do plano de ensino pelo docente no SIGAA para o Período Letivo de 2025.1 *(Art. 30, Res. nº 29/20 Consepe)* |
 | **02 a 12/05/2025** | Consulta prévia pela Coordenação de curso aos Ingressantes para a matrícula, via e-mail cadastrado no SiSU |
 | **14 a 16/05/2025** | Matrícula dos discentes Ingressantes no SIGAA (Online) *(pela Coordenação de curso)* |
 | **14 a 16/05/2025** | Matrícula dos discentes Veteranos no SIGAA (Online) |
@@ -61,7 +61,7 @@ Aqui você encontra as datas oficiais do calendário acadêmico da Universidade 
 | Data | Evento |
 |------|--------|
 | **22 a 30/09/2025** | Consulta prévia pela Coordenação de curso aos Ingressantes para a matrícula, via e-mail cadastrado no SiSU |
-| **01 a 16/10/2025** | Inclusão do plano de ensino pelo docente no SIG para o Período Letivo de 2025.2 *(Art. 30, Res. nº 29/20 Consepe)* |
+| **01 a 16/10/2025** | Inclusão do plano de ensino pelo docente no SIGAA para o Período Letivo de 2025.2 *(Art. 30, Res. nº 29/20 Consepe)* |
 | **12/10/2025** | FERIADO NACIONAL – Nossa Senhora Aparecida *(Lei nº 6.802/1980)* |
 | **14 a 16/10/2025** | Matrícula dos discentes Ingressantes no SIGAA (Online) |
 | **14 a 16/10/2025** | Matrícula dos discentes Veteranos no SIGAA (Online) |
