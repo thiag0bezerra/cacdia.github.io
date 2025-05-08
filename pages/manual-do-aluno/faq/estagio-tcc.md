@@ -11,6 +11,14 @@ Esta seção contém respostas para as perguntas mais comuns que os alunos têm 
 Consulte sempre os documentos oficiais do curso disponíveis no [SIGAA](https://sigaa.ufpb.br/sigaa/public/curso/documentos.jsf?lc=pt_BR&id=14289031), incluindo a Resolução 2022-02 (Estágio Supervisionado) e a Resolução 2022-03 (TCC).
 :::
 
+::: warning IMPORTANTE
+A Coordenação reforça que todos os estágios não-obrigatórios devem ser realizados de forma regular, conforme as normas institucionais:
+- Estágios só podem ser iniciados mediante anuência prévia da Coordenação do Curso
+- As atividades devem ser desenvolvidas em locais conveniados com a UFPB ou por agentes de integração autorizados
+- Todo estágio deve ser registrado no SIGAA antes de seu início (não é permitida formalização retroativa)
+- Estágios irregulares não poderão ser considerados para dispensa da disciplina de Estágio Supervisionado nem para aproveitamento de carga horária flexível
+:::
+
 ## Perguntas Comuns
 
 ### "Como cadastrar estágio no SIGAA?"
@@ -30,7 +38,7 @@ Para cadastrar um estágio no SIGAA (conforme Res. 2022-02):
 - Declaração de matrícula (obtida pelo SIGAA)
 
 ::: info PROCEDIMENTOS DETALHADOS
-Consulte o documento "Procedimento para registro de novos estágios não-obrigatórios" disponível no SIGAA do curso para informações mais detalhadas.
+Consulte o documento "Procedimento para registro de novos estágios não-obrigatórios" disponível no SIGAA do curso para informações mais detalhadas: [https://sigaa.ufpb.br/sigaa/public/curso/documentos.jsf?lc=pt_BR&id=14289031](https://sigaa.ufpb.br/sigaa/public/curso/documentos.jsf?lc=pt_BR&id=14289031)
 :::
 
 ### "Como aproveitar experiência profissional como estágio?"
@@ -78,7 +86,7 @@ Para se matricular no Trabalho de Conclusão de Curso (TCC) (conforme Res. 2022-
    - O trabalho deve ser concluído dentro do semestre da matrícula, salvo prorrogações autorizadas
 
 ::: info ETAPAS DE DEFESA
-Consulte o documento "Etapas para defesa de TCC" disponível no SIGAA para conhecer todo o processo, desde a matrícula até a defesa final.
+Consulte o documento "Etapas para defesa de TCC" disponível no SIGAA para conhecer todo o processo, desde a matrícula até a defesa final: [https://sigaa.ufpb.br/sigaa/public/curso/documentos.jsf?lc=pt_BR&id=14289031](https://sigaa.ufpb.br/sigaa/public/curso/documentos.jsf?lc=pt_BR&id=14289031) (seção "Procedimentos").
 :::
 
 ### "Precisa de orientador para estágio?"

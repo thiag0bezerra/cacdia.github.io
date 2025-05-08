@@ -76,15 +76,21 @@ Os períodos de matrícula e rematrícula são definidos no Calendário Acadêmi
 
 ### "Qual o mínimo de horas que posso pegar por semestre?"
 
-De acordo com a regulamentação da UFPB:
+De acordo com a regulamentação do curso de CDIA:
 
-- Alunos em situações especiais podem solicitar a redução deste mínimo mediante justificativa
-- Para solicitar essa redução, é necessário abrir processo na coordenação do curso
+- O curso exige matrícula em pelo menos **240 horas por semestre** (aproximadamente 4 disciplinas de 60h)
+- Essa exigência só pode ser flexibilizada quando a carga horária pendente for menor que 240 horas
+- Por exemplo: se você tiver apenas 200 horas pendentes para se formar, poderá se matricular em menos de 240 horas
 
-**Exceções ao mínimo de créditos:**
-- Alunos concluintes que precisam de menos créditos para integralizar o curso
-- Alunos com necessidades especiais (mediante documentação comprobatória)
-- Casos excepcionais avaliados pela coordenação do curso
+**O que fazer se não conseguir a carga horária mínima:**
+- Continue tentando realizar a matrícula e guarde prints das tentativas
+- Na matrícula extraordinária, considere disciplinas de outros cursos que tenham vagas (inclusive na sede)
+- Disciplinas extracurriculares podem ser aproveitadas para dispensa de optativas ou carga horária flexível (limite de 240 horas)
+- Em último caso, pode-se apelar às instâncias superiores (PRG e CONSEPE), mas é necessário comprovar que realmente não havia como se matricular na carga horária mínima
+
+::: warning IMPORTANTE
+Não realizar matrícula no prazo ou não cumprir a carga horária mínima sem justificativa aceita pode resultar em problemas administrativos. Planeje-se com antecedência!
+:::
 
 ### "Como transferir de curso ou instituição?"
 
