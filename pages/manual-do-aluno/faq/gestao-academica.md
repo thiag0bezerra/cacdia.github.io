@@ -30,11 +30,12 @@ No início do semestre em que você estiver cursando todas as disciplinas restan
 
 De acordo com o Regulamento da Graduação da UFPB:
 
-- Não há um limite explícito para o número de reprovações em uma mesma disciplina
-- No entanto, há o risco de **jubilamento** (desligamento) por não conclusão do curso no prazo máximo (Regulamento Geral de Graduação)
+- O limite é de 04 (quatro) reprovações em um mesmo componente curricular, após o qual ocorre cancelamento do vínculo com a UFPB (Art. 173, inciso III)
+- Reprovações consecutivas ou não em um mesmo componente curricular obrigatório colocam o discente em regime de acompanhamento de desempenho acadêmico (Art. 67)
+- Além disso, há o risco de jubilamento (desligamento) por não conclusão do curso no prazo máximo
 
 **Critérios para jubilamento:**
-- Ultrapassar o tempo máximo para conclusão do curso (geralmente 2x o tempo regular)
+- Ultrapassar o tempo máximo para conclusão do curso (tempo regular acrescido de 50%, conforme Art. 23 do Regulamento Geral de Graduação)
 - Não conseguir concluir o curso no prazo máximo, mesmo com dilatação aprovada
 - Abandonar o curso (não realizar matrícula por dois períodos consecutivos)
 
@@ -47,12 +48,11 @@ Reprovações repetidas, além de atrasarem sua formação, podem impactar na pr
 O CRA (Coeficiente de Rendimento Acadêmico) é o índice que avalia o desempenho do aluno durante o curso:
 
 **Cálculo do CRA conforme o Regulamento Geral de Graduação (Art. 90):**
-- É a soma das médias finais de cada disciplina cursada (ou dispensada) multiplicadas pela carga horária correspondente, dividida pela carga horária total solicitada
 - A fórmula oficial é: CRA = (∑ Mi × Di) / Ch (Regulamento Geral de Graduação, Art. 90)
   - ∑ = somatório
-  - Mi = média final da disciplina cursada ou dispensada
-  - Di = carga horária da disciplina cursada ou dispensada
-  - Ch = total de horas cursadas e dispensadas (exceto disciplinas trancadas)
+  - Mi = média final da i-ésima disciplina cursada ou dispensada
+  - Di = número de horas correspondente à i-ésima disciplina cursada ou dispensada
+  - Ch = número total de horas solicitado, incluindo as horas correspondentes às disciplinas cursadas e dispensadas, excluindo aquelas correspondentes às disciplinas trancadas
 
 **Características do CRA:**
 - Varia de 0,00 a 10,00 (com duas casas decimais)
@@ -64,6 +64,29 @@ O CRA (Coeficiente de Rendimento Acadêmico) é o índice que avalia o desempenh
 - Define a prioridade na matrícula em disciplinas
 - É critério de seleção para programas de monitoria, intercâmbio e bolsas
 - Pode ser utilizado em processos seletivos para pós-graduação e concursos
+
+### "O que é o Regime de Acompanhamento de Desempenho Acadêmico?"
+
+O Regime de Acompanhamento de Desempenho Acadêmico é um mecanismo previsto no Regulamento Geral de Graduação (Art. 64-68) que visa oferecer orientação acadêmica a discentes com dificuldades em seu desempenho.
+
+**Você é colocado neste regime quando, no período letivo regular anterior, incorrer em uma ou mais das seguintes situações (Art. 67):**
+- Trancamento, consecutivo ou não, em um mesmo componente curricular obrigatório ou equivalente
+- Reprovação, consecutiva ou não, em um mesmo componente curricular obrigatório ou equivalente
+- CRA inferior a 5,0 (cinco)
+
+**Implicações do regime de acompanhamento:**
+- A coordenação do curso irá orientar seu plano de matrícula
+- Possível indicação para programas de tutoria e monitoria
+- Orientações específicas sobre métodos de estudo e gestão do tempo
+
+**Como sair do regime de acompanhamento:**
+- Melhorar o CRA para igual ou acima de 5,0
+- Obter aprovação nos componentes curriculares que geraram a entrada no regime
+- Seguir rigorosamente as orientações da coordenação do curso
+
+::: tip AJUDA DISPONÍVEL
+Se você estiver em regime de acompanhamento, procure a coordenação do curso para receber orientação. Existem diversos recursos na universidade para ajudá-lo a superar as dificuldades acadêmicas, como monitoria, apoio psicopedagógico e grupos de estudo.
+:::
 
 ### "Quando é a colação de grau?"
 
