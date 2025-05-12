@@ -59,10 +59,11 @@ Para solicitar dispensa de disciplinas:
 
 **Critérios para aproveitamento segundo o Art. 40 do Regulamento Geral de Graduação:**
 - A disciplina deve ter sido cursada há no máximo 8 anos
-- Deve ter compatibilidade mínima de 75% de carga horária e conteúdo
-- O curso de origem deve ser reconhecido ou autorizado pelo MEC
+- Deve ter compatibilidade de pelo menos 75% de carga horária e conteúdo
+- O curso de origem deve ser legalmente reconhecido ou autorizado pelos órgãos competentes
 - Disciplinas cursadas no exterior precisam de documentação traduzida (exceto espanhol, francês e inglês)
-- A carga horária máxima de aproveitamento não pode ultrapassar 50% da carga horária total do curso (Regulamento Geral de Graduação, Art. 40)
+- A carga horária máxima de aproveitamento não pode ultrapassar 50% da carga horária total do curso
+- No aproveitamento, os componentes curriculares são registrados com código e carga horária de seus correspondentes na UFPB, mas sem nota ou frequência, apenas com a situação "aproveitado"
 
 **Dispensa de disciplina de línguas (inglês/português) por proficiência:**
 1. Verifique os critérios de dispensa no site do Departamento de Línguas
