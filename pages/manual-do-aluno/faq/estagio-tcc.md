@@ -108,24 +108,25 @@ Sim, é necessário ter um orientador para o estágio (conforme Lei 11.788/2008 
 - Apresente seu plano de atividades para que o professor avalie se pode orientá-lo
 - A coordenação pode indicar orientadores disponíveis, caso você tenha dificuldade
 
-### "Como dispensar o TCC com artigo publicado?"
+### "Como substituir o TCC tradicional por artigo publicado?"
 
-O Projeto Pedagógico do Curso (PPC) de Ciência de Dados e IA e a Resolução 2022-03 permitem o aproveitamento de artigo científico como TCC, sob certas condições:
+É importante destacar que, de acordo com o Art. 45 do Regulamento Geral de Graduação da UFPB, "O componente curricular TCC não pode ser aproveitado nem dispensado." No entanto, o Projeto Pedagógico do Curso (PPC) de Ciência de Dados e IA e a Resolução 2022-03 do Colegiado do Curso permitem a apresentação de um artigo científico como formato alternativo de TCC, mantendo a obrigatoriedade de matrícula no componente e de defesa perante banca:
 
-**Requisitos para aproveitamento (conforme Res. 2022-03):**
+**Requisitos para uso de artigo como TCC (conforme Res. 2022-03):**
 - O artigo deve ter sido publicado ou aceito para publicação em periódico ou conferência com revisão por pares
 - O aluno deve ser o primeiro autor ou autor principal do trabalho
 - O tema do artigo deve estar relacionado à área de Ciência de Dados ou Inteligência Artificial
 - A publicação deve ter ocorrido durante o período em que o aluno estava matriculado no curso
 
-**Procedimento para solicitação:**
-1. Abra um processo na coordenação do curso solicitando o aproveitamento (utilize os modelos de requerimento disponíveis no SIGAA)
-2. Anexe uma cópia do artigo publicado ou da carta de aceite
-3. Apresente comprovação da qualidade do veículo de publicação (classificação Qualis ou equivalente)
-4. Aguarde a análise pelo colegiado do curso
+**Procedimento para submissão:**
+1. Matricule-se normalmente no componente TCC
+2. Submeta o artigo como seu TCC, utilizando os modelos de documentação disponíveis no SIGAA
+3. Anexe uma cópia do artigo publicado ou da carta de aceite
+4. Apresente comprovação da qualidade do veículo de publicação (classificação Qualis ou equivalente)
+5. Realize a defesa perante banca examinadora, conforme estabelecido na Resolução 2022-03 do Colegiado do Curso
 
 ::: info IMPORTANTE
-Mesmo com o aproveitamento do artigo, pode ser necessário realizar uma apresentação formal para uma banca examinadora, conforme estabelecido na Resolução 2022-03 do Colegiado do Curso.
+Mesmo utilizando um artigo já publicado, o aluno deve cumprir todas as etapas formais do TCC, incluindo matrícula e defesa perante banca examinadora, conforme estabelecido na Resolução 2022-03 do Colegiado do Curso e em conformidade com o Art. 45 do Regulamento Geral de Graduação.
 :::
 
 ### "Como elaborar o relatório final de estágio?"
