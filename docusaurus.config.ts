@@ -72,7 +72,7 @@ const config: Config = {
       title: 'CACDIA',
       logo: {
         alt: 'CACDIA Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
