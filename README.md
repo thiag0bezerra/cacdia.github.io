@@ -1,32 +1,41 @@
-# CACDIA - Centro Acadêmico de Ciência de Dados e Inteligência Artificial
+# Website
 
-Site oficial do Centro Acadêmico de Ciência de Dados e Inteligência Artificial (CACDIA) da Universidade Federal da Paraíba.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## Sobre o Projeto
+### Installation
 
-Este site foi desenvolvido utilizando [VitePress](https://vitepress.dev/) e serve como plataforma central de informações para os estudantes do curso de Ciência de Dados e Inteligência Artificial da UFPB.
-
-## Conteúdo
-
-- **Manual do Aluno**: Informações essenciais sobre calendário acadêmico, auxílios estudantis e processo de ingresso
-- **Guias de Programação**: Recursos técnicos para desenvolvimento de habilidades em Ciência de Dados e IA
-
-## Desenvolvimento Local
-
-```bash
-# Instalar dependências
-npm install
-
-# Iniciar servidor de desenvolvimento
-npm run docs:dev
-
-# Construir para produção
-npm run docs:build
-
-# Visualizar build de produção localmente
-npm run docs:preview
+```
+$ yarn
 ```
 
-## Licença
+### Local Development
 
-Este projeto está sob a licença MIT.
+```
+$ yarn start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
