@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # trocado de main para master
+
+jobs:
+  build:
+    name: Build Docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Instala o pnpm para podermos usá-lo
+      - uses: pnpm/action-setup@v4       # versão recomendada no Marketplace :contentReference[oaicite:0]{index=0}
+        with:
+          version: latest
+
+      # Configura o Node.js 18 e ativa cache para pnpm
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'                   # habilita cache de dependências pnpm :contentReference[oaicite:1]{index=1}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build website
+        run: pnpm build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
