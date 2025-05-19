@@ -97,14 +97,22 @@
   border: 1.5px solid var(--ifm-color-emphasis-500); /* contraste mais forte */
   border-radius: 4px;
   cursor: pointer;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s, opacity 0.3s ease;
   background-color: #f8fafc; /* fundo mais claro para destacar */
+}
+
+/* Quando uma disciplina é selecionada, as não relacionadas ficam mais suaves */
+.has-selection .discipline-card:not(.discipline-selected):not(.discipline-prerequisite):not(.discipline-dependent) {
+  opacity: 0.5;
+  filter: grayscale(20%);
 }
 
 .discipline-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
   border-color: var(--ifm-color-primary); /* realce no hover */
+  opacity: 1 !important; /* Garantir que o hover restaura a opacidade total */
+  filter: grayscale(0%);
 }
 
 .discipline-selected {

@@ -35,12 +35,12 @@ export function DisciplineCard({
   return (
     <div
       className={cardClassName}
-      onClick={() => { if (!isSelected) onClick(id); }}
+      onClick={() => onClick(id)}
       tabIndex={0}
       role="button"
       aria-pressed={isSelected}
       onKeyDown={(e) => {
-        if ((e.key === 'Enter' || e.key === ' ') && !isSelected) {
+        if ((e.key === 'Enter' || e.key === ' ')) {
           e.preventDefault();
           onClick(id);
         }

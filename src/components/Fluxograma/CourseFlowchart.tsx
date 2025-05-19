@@ -25,6 +25,8 @@ export function CourseFlowchart({ course }: CourseFlowchartProps) {
   const {
     selectedDisciplineId,
     dependencyChain,
+    prerequisiteIds,
+    dependentIds,
     handleDisciplineClick,
     disciplineMap, // disciplineMap agora vem do hook
   } = useDisciplineSelection(course);
@@ -41,7 +43,11 @@ export function CourseFlowchart({ course }: CourseFlowchartProps) {
   }, [selectedDisciplineId, dependencyChain, course.periods]);
 
   return (
-    <div className={`flowchart-container${loaded ? ' loaded' : ''}`} aria-label="Fluxograma do curso" role="region">
+    <div 
+      className={`flowchart-container${loaded ? ' loaded' : ''}${selectedDisciplineId ? ' has-selection' : ''}`} 
+      aria-label="Fluxograma do curso" 
+      role="region"
+    >
       <div className="flowchart-scroll-area">
         <div className="periods-container">
           {course.periods.map((period) => (
@@ -50,6 +56,8 @@ export function CourseFlowchart({ course }: CourseFlowchartProps) {
                 period={period}
                 selectedDisciplineId={selectedDisciplineId}
                 dependencyChain={dependencyChain}
+                prerequisiteIds={prerequisiteIds}
+                dependentIds={dependentIds}
                 onDisciplineClick={handleDisciplineClick}
                 hasDependencies={!!periodsWithDependencies.get(period.number)}
                 disciplineMap={disciplineMap}

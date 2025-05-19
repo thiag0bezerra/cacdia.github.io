@@ -6,6 +6,8 @@ interface PeriodColumnProps {
   period: Period;
   selectedDisciplineId: string | null;
   dependencyChain: string[];
+  prerequisiteIds: string[];
+  dependentIds: string[];
   onDisciplineClick: (id: string) => void;
   hasDependencies: boolean;
   disciplineMap: Map<string, Discipline>;
@@ -15,6 +17,8 @@ export function PeriodColumn({
   period,
   selectedDisciplineId,
   dependencyChain,
+  prerequisiteIds,
+  dependentIds,
   onDisciplineClick,
   hasDependencies,
   disciplineMap,
@@ -23,20 +27,6 @@ export function PeriodColumn({
     ? 'period-column period-highlighted'
     : 'period-column';
 
-  const dependencyInfo = useMemo(() => {
-    if (!selectedDisciplineId) return {};
-    const info: Record<string, { isPrerequisite: boolean; isDependent: boolean }> = {};
-    dependencyChain.forEach((id) => {
-      if (id === selectedDisciplineId) return;
-      info[id] = {
-        isPrerequisite: isDisciplinePrerequisiteOf(id, selectedDisciplineId, disciplineMap),
-        isDependent: isDisciplineDependentOf(id, selectedDisciplineId, disciplineMap),
-      };
-    });
-    return info;
-  }, [selectedDisciplineId, dependencyChain, disciplineMap]);
-
-  // Exibe 'Optativas' se o período for optativo
   const periodTitle = period.number === 0 ? 'Optativas' : `Período ${period.number}`;
 
   return (
@@ -53,7 +43,8 @@ export function PeriodColumn({
       <div className="period-disciplines">
         {period.disciplines.map((discipline) => {
           const isSelected = selectedDisciplineId === discipline.id;
-          const depInfo = dependencyInfo[discipline.id] || { isPrerequisite: false, isDependent: false };
+          const isPrerequisite = !isSelected && prerequisiteIds.includes(discipline.id);
+          const isDependent = !isSelected && dependentIds.includes(discipline.id);
           return (
             <div 
               key={discipline.id}
@@ -62,8 +53,8 @@ export function PeriodColumn({
               <DisciplineCard
                 discipline={discipline}
                 isSelected={isSelected}
-                isPrerequisite={depInfo.isPrerequisite}
-                isDependent={depInfo.isDependent}
+                isPrerequisite={isPrerequisite}
+                isDependent={isDependent}
                 onClick={onDisciplineClick}
               />
             </div>
@@ -72,22 +63,4 @@ export function PeriodColumn({
       </div>
     </div>
   );
-}
-
-function isDisciplinePrerequisiteOf(prereqId: string, targetId: string, disciplineMap: Map<string, Discipline>, visited: Set<string> = new Set()): boolean {
-  if (visited.has(targetId)) return false;
-  visited.add(targetId);
-  const target = disciplineMap.get(targetId);
-  if (!target) return false;
-  if (target.prerequisites.includes(prereqId)) return true;
-  return target.prerequisites.some(pid => isDisciplinePrerequisiteOf(prereqId, pid, disciplineMap, visited));
-}
-
-function isDisciplineDependentOf(depId: string, selectedId: string, disciplineMap: Map<string, Discipline>, visited: Set<string> = new Set()): boolean {
-  if (visited.has(depId)) return false;
-  visited.add(depId);
-  const discipline = disciplineMap.get(depId);
-  if (!discipline) return false;
-  if (discipline.prerequisites.includes(selectedId)) return true;
-  return discipline.prerequisites.some(pid => isDisciplineDependentOf(pid, selectedId, disciplineMap, visited));
 }
