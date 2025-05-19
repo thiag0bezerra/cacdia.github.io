@@ -1,0 +1,122 @@
+/*
+ * Estilos para seleção de andar no mapa
+ */
+.mapa-andar-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mapa-andar-btn {
+  background: var(--ifm-background-surface-color, #fff);
+  border: 1.5px solid var(--ifm-color-primary, #2393d5);
+  color: var(--ifm-color-primary, #2393d5);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(36, 80, 120, 0.04);
+  position: relative;
+  min-width: 75px;
+  text-align: center;
+}
+
+.mapa-andar-btn.selected {
+  background: var(--ifm-color-primary, #2393d5);
+  color: #fff;
+  border-color: var(--ifm-color-primary, #2393d5);
+  box-shadow: 0 2px 5px rgba(35, 147, 213, 0.2);
+  transform: translateY(-1px);
+}
+
+.mapa-andar-btn:focus {
+  outline: 2px solid var(--ifm-color-primary-light, #339edd);
+  outline-offset: 2px;
+}
+
+.mapa-andar-btn:hover:not(.selected) {
+  background: #eaf6fd;
+  color: var(--ifm-color-primary, #2393d5);
+  border-color: var(--ifm-color-primary-light, #339edd);
+}
+
+.mapa-andar-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .mapa-andar-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    min-width: 60px;
+  }
+  
+  .mapa-andar-nav {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapa-andar-btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    min-width: 55px;
+  }
+  
+  .mapa-andar-nav {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Melhorias de acessibilidade para foco via teclado */
+.mapa-andar-btn:focus-visible {
+  outline: 3px solid var(--ifm-color-primary-lightest, #5db2e4);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos para hover em salas do mapa */
+.mapa-sala {
+  transition: filter 0.3s ease, fill 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.mapa-sala:hover {
+  filter: brightness(0.85);
+  cursor: pointer;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1px;
+}
+
+/* Estilos específicos para diferentes tipos de salas */
+.mapa-sala[data-type="sala-de-aula"]:hover {
+  filter: brightness(0.8) saturate(1.1);
+}
+
+.mapa-sala[data-type="sala-de-professor"]:hover {
+  filter: brightness(0.8) saturate(1.1);
+}
+
+.mapa-sala[data-type="banheiro-masculino"]:hover,
+.mapa-sala[data-type="banheiro-feminino"]:hover {
+  filter: brightness(0.85) saturate(1.2);
+}
+
+.mapa-sala[data-type="biblioteca"]:hover,
+.mapa-sala[data-type="auditorio"]:hover {
+  filter: brightness(0.85) saturate(1.1);
+}
+
+.mapa-sala[data-type="laboratorio"]:hover,
+.mapa-sala[data-type="laboratorio-de-pesquisa"]:hover {
+  filter: brightness(0.85) saturate(1.1);
+}
+
+.mapa-sala[data-type="generico"]:hover {
+  filter: brightness(0.85) saturate(1.05);
+}
