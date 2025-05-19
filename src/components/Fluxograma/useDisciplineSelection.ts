@@ -15,47 +15,60 @@ export function useDisciplineSelection(course: Course) {
     return map;
   }, [course]);
 
+  // Função recursiva para pegar todos os pré-requisitos (diretos e indiretos)
+  const getAllPrerequisites = useCallback((id: string, visited = new Set<string>()): string[] => {
+    if (visited.has(id)) return [];
+    visited.add(id);
+    const disc = disciplineMap.get(id);
+    if (!disc) return [];
+    let result: string[] = [];
+    for (const prereqId of disc.prerequisites) {
+      result.push(prereqId);
+      result = result.concat(getAllPrerequisites(prereqId, visited));
+    }
+    return result;
+  }, [disciplineMap]);
+
+  // Função recursiva para pegar todos os dependentes (diretos e indiretos)
+  const getAllDependents = useCallback((id: string, visited = new Set<string>()): string[] => {
+    if (visited.has(id)) return [];
+    visited.add(id);
+    let result: string[] = [];
+    disciplineMap.forEach((disc, discId) => {
+      if (disc.prerequisites.includes(id)) {
+        result.push(discId);
+        result = result.concat(getAllDependents(discId, visited));
+      }
+    });
+    return result;
+  }, [disciplineMap]);
+
   const selectedDiscipline = useMemo(() => {
     if (!selectedDisciplineId) return null;
     return disciplineMap.get(selectedDisciplineId) || null;
   }, [selectedDisciplineId, disciplineMap]);
 
-  // Calcula a cadeia de dependências
+  // Calcula a cadeia de dependências (selecionada + todos os pré-requisitos + todos os dependentes)
   const dependencyChain = useMemo(() => {
     if (!selectedDisciplineId) return [];
     const chain = new Set<string>([selectedDisciplineId]);
-    const visitedPrereq = new Set<string>();
-    const visitedDep = new Set<string>();
-    function addPrerequisites(discipline: Discipline) {
-      if (visitedPrereq.has(discipline.id)) return;
-      visitedPrereq.add(discipline.id);
-      discipline.prerequisites.forEach(prereqId => {
-        if (!chain.has(prereqId)) {
-          chain.add(prereqId);
-          const prereq = disciplineMap.get(prereqId);
-          if (prereq) {
-            addPrerequisites(prereq);
-          }
-        }
-      });
-    }
-    function findDependents(disciplineId: string) {
-      if (visitedDep.has(disciplineId)) return;
-      visitedDep.add(disciplineId);
-      disciplineMap.forEach((depDiscipline, id) => {
-        if (depDiscipline.prerequisites.includes(disciplineId) && !chain.has(id)) {
-          chain.add(id);
-          findDependents(id);
-        }
-      });
-    }
-    const discipline = disciplineMap.get(selectedDisciplineId);
-    if (discipline) {
-      addPrerequisites(discipline);
-      findDependents(selectedDisciplineId);
-    }
+    getAllPrerequisites(selectedDisciplineId).forEach(id => chain.add(id));
+    getAllDependents(selectedDisciplineId).forEach(id => chain.add(id));
     return Array.from(chain);
-  }, [selectedDisciplineId, disciplineMap]);
+  }, [selectedDisciplineId, getAllPrerequisites, getAllDependents]);
+
+  // Arrays separados para destaque visual
+  const prerequisiteIds = useMemo(() => {
+    if (!selectedDisciplineId) return [];
+    // Remove o próprio id selecionado do array de pré-requisitos
+    return getAllPrerequisites(selectedDisciplineId).filter(id => id !== selectedDisciplineId);
+  }, [selectedDisciplineId, getAllPrerequisites]);
+
+  const dependentIds = useMemo(() => {
+    if (!selectedDisciplineId) return [];
+    // Remove o próprio id selecionado do array de dependentes
+    return getAllDependents(selectedDisciplineId).filter(id => id !== selectedDisciplineId);
+  }, [selectedDisciplineId, getAllDependents]);
 
   const handleDisciplineClick = useCallback((id: string) => {
     setSelectedDisciplineId(prev => (prev === id ? null : id));
@@ -69,6 +82,8 @@ export function useDisciplineSelection(course: Course) {
     selectedDisciplineId,
     selectedDiscipline,
     dependencyChain,
+    prerequisiteIds,
+    dependentIds,
     handleDisciplineClick,
     clearSelection,
     disciplineMap, // agora exposto para uso externo

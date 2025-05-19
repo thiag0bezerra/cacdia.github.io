@@ -24,8 +24,17 @@ function parseCSVToCourse(csvText: string): Course {
     throw new Error('CSV inválido: colunas essenciais ausentes.');
   }
 
-  // Agrupa disciplinas por período
-  const periodMap = new Map<string, { number: number; disciplines: any[] }>();
+  // Primeiro passo: coleta todas as disciplinas e seus períodos para criar o mapa nome -> id
+  const nameToIdMap = new Map<string, string>();
+  const tempDisciplines: Array<{
+    name: string;
+    periodRaw: string;
+    periodNumber: number;
+    credits: number;
+    prerequisites: string[];
+    isOptativa: boolean;
+  }> = [];
+
   for (let i = 1; i < lines.length; i++) {
     // Suporte a nomes de disciplinas com vírgula: split limitado ao número de colunas
     const row = lines[i].split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/g);
@@ -35,19 +44,41 @@ function parseCSVToCourse(csvText: string): Course {
     const periodNumber = isOptativa ? 0 : (/^p(\d+)$/i.test(periodRaw) ? Number(periodRaw.replace(/\D/g, '')) : 0);
     const name = row[nameIdx]?.trim();
     const credits = Number(row[creditsIdx]?.trim() || '0');
-    // Não há código no novo CSV
-    const code = undefined;
-    // Gera id único: nome + período para evitar duplicidade
-    const id = `${name}__${periodRaw}`;
     // Pré-requisitos: coleta das três colunas
     const prereqs = prereqIdxs
       .map(idx => (idx >= 0 ? row[idx]?.trim() : ''))
       .filter(Boolean);
+
+    // Gera id único: nome + período para evitar duplicidade
+    const id = `${name}__${periodRaw}`;
+    // Armazena o mapeamento do nome para o ID
+    nameToIdMap.set(name, id);
+    // Armazena os dados da disciplina temporariamente
+    tempDisciplines.push({ name, periodRaw, periodNumber, credits, prerequisites: prereqs, isOptativa });
+  }
+
+  // Segundo passo: cria as disciplinas com os pré-requisitos corretos usando os IDs
+  const periodMap = new Map<string, { number: number; disciplines: any[] }>();
+  for (const disc of tempDisciplines) {
+    const { name, periodRaw, periodNumber, credits, prerequisites, isOptativa } = disc;
+    // Gera id único: nome + período para evitar duplicidade
+    const id = nameToIdMap.get(name)!;
+    // Converte os nomes dos pré-requisitos para IDs
+    const prereqIds = prerequisites
+      .map(prereqName => nameToIdMap.get(prereqName))
+      .filter(Boolean) as string[];
+
     const periodKey = isOptativa ? 'Optativa' : (periodRaw || '0');
     if (!periodMap.has(periodKey)) {
       periodMap.set(periodKey, { number: periodNumber, disciplines: [] });
     }
-    periodMap.get(periodKey)!.disciplines.push({ id, code, name, credits, prerequisites: prereqs });
+    periodMap.get(periodKey)!.disciplines.push({ 
+      id, 
+      code: undefined, // Não há código no novo CSV
+      name, 
+      credits, 
+      prerequisites: prereqIds 
+    });
   }
   // Ordena períodos numericamente, optativas no final
   const periods = Array.from(periodMap.entries())
