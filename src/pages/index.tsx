@@ -21,7 +21,12 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/fluxograma">
-            Fluxograma do Curso
+            Fluxograma
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/mapa">
+            Mapa do CI
           </Link>
         </div>
       </div>
