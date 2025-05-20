@@ -1,0 +1,53 @@
+name: 🔄 Atualiza saci.json diariamente
+
+on:
+  schedule:
+    # Executa diariamente às 06:00 em Fortaleza (06:00 BRT = 09:00 UTC)
+    - cron: '0 9 * * *'
+
+# 2) Permissão para write em contents
+permissions:
+  contents: write
+
+jobs:
+  update-saci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 3) Checkout “on branch” para permitir commit
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+        with:
+          ref: master
+
+      # 4) Download com -f para falhar em HTTP errors
+      - name: Baixa o JSON remoto
+        run: |
+          curl -fsSL "https://sa.ci.ufpb.br/api/db/public/paas?centro=ci" -o novo_saci.json
+
+      # Passo extra para gerar a data
+      - name: Define data
+        id: data
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      # Comparação
+      - name: Compara com o arquivo local
+        id: compara
+        run: |
+          if diff -q novo_saci.json static/data/saci/saci.json >/dev/null; then
+            echo "mudou=false" >> $GITHUB_OUTPUT
+          else
+            echo "mudou=true"  >> $GITHUB_OUTPUT
+            mv novo_saci.json static/data/saci/saci.json
+          fi
+
+      # 6) Commit & Push com parâmetros corretos
+      - name: Commit & Push se houver mudanças
+        if: steps.compara.outputs.mudou == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: atualiza saci.json com dados de ${{ steps.data.outputs.date }}"
+          file_pattern: static/data/saci/saci.json
+          commit_user_name: 'github-actions'
+          commit_user_email: 'actions@github.com'
+          branch: master
