@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import './styles.css';
-import subsolo from '@site/static/data/subsolo.json';
-import terreo from '@site/static/data/terreo.json';
-import primeiro from '@site/static/data/primeiro.json';
-import segundo from '@site/static/data/segundo.json';
-import terceiro from '@site/static/data/terceiro.json';
+import subsolo from '@site/static/data/mapa/subsolo.json';
+import terreo from '@site/static/data/mapa/terreo.json';
+import primeiro from '@site/static/data/mapa/primeiro.json';
+import segundo from '@site/static/data/mapa/segundo.json';
+import terceiro from '@site/static/data/mapa/terceiro.json';
+import saci from '@site/static/data/saci/saci.json';
+import Modal from '@site/src/components/Mapa/Modal';
 import {
   IconeSalaDeAula,
   IconeSalaProfessor,
@@ -37,12 +39,12 @@ function parseSvgPath(d: string): {
   maxY: number;
 } {
   try {
-    const commands = d.match(/[a-zA-Z][^a-zA-Z]*/g) || [];
+    const commands: string[] = d.match(/[a-zA-Z][^a-zA-Z]*/g) || [];
     let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
     let x = 0, y = 0;
 
     commands.forEach(cmd => {
-      const type = cmd[0];
+      const type: string = cmd[0];
       const args = cmd.slice(1).trim().split(/[\s,]+/).filter(Boolean).map(Number);
       switch (type) {
         case 'M': x = args[0]; y = args[1]; break;
@@ -81,6 +83,31 @@ function parseSvgPath(d: string): {
   }
 }
 
+function getSaciRoomInfo(roomTitle: string) {
+  if (!saci?.solution?.solution) return null;
+  const norm = (s: string) => s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const roomNorm = norm(roomTitle);
+  for (const sala of saci.solution.solution) {
+    if (
+      norm(sala.nome) === roomNorm ||
+      norm('CI-' + sala.nome) === roomNorm ||
+      norm('CI ' + sala.nome) === roomNorm
+    ) {
+      // Garante que todas as propriedades relevantes estejam presentes
+      return {
+        ...sala,
+        bloco: sala.bloco,
+        preferencias: sala.preferencias,
+        classes: (sala.classes || []).map((c: any) => ({
+          ...c,
+          pcd: !!c.pcd,
+        })),
+      };
+    }
+  }
+  return null;
+}
+
 type IconType =
   | 'sala-de-aula'
   | 'sala-de-professor'
@@ -112,7 +139,29 @@ const ICON_SIZE = 200;
 // nunca passe de 25% do ícone original
 const MAX_ICON_SCALE = 0.25;
 
-const Path: React.FC<PathProps> = props => {
+// Função utilitária para mapear nome de sala para dados do SACI
+function getSaciClassesForRoom(roomTitle: string): any[] {
+  if (!saci?.solution?.solution) return [];
+  // Normaliza nomes: CI-101, CI 101, 101, etc.
+  const norm = (s: string) => s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const roomNorm = norm(roomTitle);
+  for (const sala of saci.solution.solution) {
+    if (norm(sala.nome) === roomNorm || norm('CI-' + sala.nome) === roomNorm || norm('CI ' + sala.nome) === roomNorm) {
+      // Enriquece os dados das classes com informações da sala
+      const classes = sala.classes || [];
+      return classes.map(c => ({
+        ...c,
+        salaNome: sala.nome,
+        salaCapacidade: sala.capacidade,
+        salaAcessivel: sala.acessivel,
+        salaTipo: sala.tipo
+      }));
+    }
+  }
+  return [];
+}
+
+const Path: React.FC<PathProps & { onRoomClick?: (room: any) => void }> = props => {
   const { id, d, fill, fillRule } = props;
   const type = props.type || 'none';
 
@@ -149,9 +198,19 @@ const Path: React.FC<PathProps> = props => {
   // gap ainda menor apenas para o título
   const titleGap = 0;
 
+  // Verifica se a sala é acessível
+  // Primeiro tenta diretamente pelo SACI
+  let roomIsAccessible = false;
+  if (type === 'sala-de-aula' && props.title) {
+    const saciInfo = getSaciClassesForRoom(props.title);
+    if (saciInfo.length > 0) {
+      roomIsAccessible = !!saciInfo[0].salaAcessivel;
+    }
+  }
+
   let icone: React.ReactNode;
   switch (type) {
-    case 'sala-de-aula': icone = <IconeSalaDeAula width={ICON_SIZE} height={ICON_SIZE} />; break;
+    case 'sala-de-aula': icone = <IconeSalaDeAula width={ICON_SIZE} height={ICON_SIZE} acessivel={roomIsAccessible} />; break;
     case 'sala-de-professor': icone = <IconeSalaProfessor width={ICON_SIZE} height={ICON_SIZE} />; break;
     case 'banheiro-masculino': icone = <IconeBanheiroMasculino width={ICON_SIZE} height={ICON_SIZE} />; break;
     case 'banheiro-feminino': icone = <IconeBanheiroFeminino width={ICON_SIZE} height={ICON_SIZE} />; break;
@@ -160,6 +219,12 @@ const Path: React.FC<PathProps> = props => {
     case 'laboratorio': icone = <IconeLaboratorio width={ICON_SIZE} height={ICON_SIZE} />; break;
     case 'laboratorio-de-pesquisa': icone = <IconeLaboratorioDePesquisa width={ICON_SIZE} height={ICON_SIZE} />; break;
     default: icone = <IconeGenerico width={ICON_SIZE} height={ICON_SIZE} />; break;
+  }
+
+  // Adiciona informações do SACI se for sala de aula CI-xxx ou SBxx
+  let saciClasses: any[] = [];
+  if (props.type === 'sala-de-aula' && props.title) {
+    saciClasses = getSaciClassesForRoom(props.title);
   }
 
   const calcFontSize = (base: number, text = ''): number => {
@@ -171,20 +236,27 @@ const Path: React.FC<PathProps> = props => {
   };
 
   return (
-    <>
+    <g>
       <path
         id={id}
         d={d}
         fill={fill}
         fillRule={fillRule}
-        className="mapa-sala"
+        className={`mapa-sala ${roomIsAccessible ? 'mapa-sala-acessivel' : ''}`}
         data-type={type}
+        onClick={() => {
+          if (props.onRoomClick && props.title) {
+            const roomInfo = getSaciRoomInfo(props.title);
+            if (roomInfo && roomInfo.classes) {
+              props.onRoomClick(roomInfo);
+            }
+          }
+        }}
+        style={{ cursor: (props.title && getSaciRoomInfo(props.title)?.classes?.length > 0) ? 'pointer' : undefined }}
       />
-
       <g transform={calculateTransform(cx, cy, ICON_SIZE, ICON_SIZE, iconScale)}>
         {icone}
       </g>
-
       {/* TITULO: aproximado ainda mais, usando titleGap */}
       {props.title && (() => {
         const lines = props.title.toUpperCase().split(/\s+/);
@@ -212,7 +284,6 @@ const Path: React.FC<PathProps> = props => {
           </text>
         );
       })()}
-
       {/* DESCRIPTION: permanece colado logo abaixo do ícone */}
       {props.description && (() => {
         const lines = props.description.toUpperCase().split(/\s+/);
@@ -238,7 +309,7 @@ const Path: React.FC<PathProps> = props => {
           </text>
         );
       })()}
-    </>
+    </g>
   );
 };
 
@@ -260,9 +331,10 @@ interface SalaJSON {
 interface FloorProps {
   svgId: string;
   data: SalaJSON[];
+  onRoomClick?: (room: any) => void;
 }
 
-const Floor: React.FC<FloorProps> = ({ svgId, data }) => {
+const Floor: React.FC<FloorProps> = ({ svgId, data, onRoomClick }) => {
   const validData = React.useMemo(() => {
     if (!Array.isArray(data)) return [];
     return data
@@ -302,52 +374,52 @@ const Floor: React.FC<FloorProps> = ({ svgId, data }) => {
         <title id={`${svgId}-title`}>Mapa do {svgId}</title>
         <desc>Mapa detalhado do {svgId} do Centro de Informática</desc>
         {validData.map((sala, idx) => (
-          <Path key={`${svgId}-${idx}`} {...sala} />
+          <Path key={`${svgId}-${idx}`} {...sala} onRoomClick={onRoomClick} />
         ))}
       </svg>
     </>
   );
 };
 
-export const Subsolo = () => {
+export const Subsolo = (props: { onRoomClick?: (room: any) => void }) => {
   try {
-    return <Floor svgId="subsolo" data={(subsolo || []) as SalaJSON[]} />;
+    return <Floor svgId="subsolo" data={(subsolo || []) as SalaJSON[]} onRoomClick={props.onRoomClick} />;
   } catch (error) {
     console.error("Erro ao renderizar Subsolo:", error);
     return <div role="alert">Erro ao carregar o mapa do subsolo</div>;
   }
 };
 
-export const Terreo = () => {
+export const Terreo = (props: { onRoomClick?: (room: any) => void }) => {
   try {
-    return <Floor svgId="terreo" data={(terreo || []) as SalaJSON[]} />;
+    return <Floor svgId="terreo" data={(terreo || []) as SalaJSON[]} onRoomClick={props.onRoomClick} />;
   } catch (error) {
     console.error("Erro ao renderizar Terreo:", error);
     return <div role="alert">Erro ao carregar o mapa do térreo</div>;
   }
 };
 
-export const PrimeiroAndar = () => {
+export const PrimeiroAndar = (props: { onRoomClick?: (room: any) => void }) => {
   try {
-    return <Floor svgId="primeiro-andar" data={(primeiro || []) as unknown as SalaJSON[]} />;
+    return <Floor svgId="primeiro-andar" data={(primeiro || []) as unknown as SalaJSON[]} onRoomClick={props.onRoomClick} />;
   } catch (error) {
     console.error("Erro ao renderizar PrimeiroAndar:", error);
     return <div role="alert">Erro ao carregar o mapa do primeiro andar</div>;
   }
 };
 
-export const SegundoAndar = () => {
+export const SegundoAndar = (props: { onRoomClick?: (room: any) => void }) => {
   try {
-    return <Floor svgId="segundo-andar" data={(segundo || []) as SalaJSON[]} />;
+    return <Floor svgId="segundo-andar" data={(segundo || []) as SalaJSON[]} onRoomClick={props.onRoomClick} />;
   } catch (error) {
     console.error("Erro ao renderizar SegundoAndar:", error);
     return <div role="alert">Erro ao carregar o mapa do segundo andar</div>;
   }
 };
 
-export const TerceiroAndar = () => {
+export const TerceiroAndar = (props: { onRoomClick?: (room: any) => void }) => {
   try {
-    return <Floor svgId="terceiro-andar" data={(terceiro || []) as SalaJSON[]} />;
+    return <Floor svgId="terceiro-andar" data={(terceiro || []) as SalaJSON[]} onRoomClick={props.onRoomClick} />;
   } catch (error) {
     console.error("Erro ao renderizar TerceiroAndar:", error);
     return <div role="alert">Erro ao carregar o mapa do terceiro andar</div>;
@@ -356,6 +428,7 @@ export const TerceiroAndar = () => {
 
 export default function MapaPage() {
   const [andar, setAndar] = useState<'subsolo' | 'terreo' | 'primeiro' | 'segundo' | 'terceiro'>('terreo');
+  const [modalRoom, setModalRoom] = useState<any | null>(null);
 
   const buttonRefs = {
     subsolo: React.useRef<HTMLButtonElement>(null),
@@ -384,12 +457,12 @@ export default function MapaPage() {
 
   let FloorComponent;
   switch (andar) {
-    case 'subsolo': FloorComponent = <Subsolo />; break;
-    case 'terreo': FloorComponent = <Terreo />; break;
-    case 'primeiro': FloorComponent = <PrimeiroAndar />; break;
-    case 'segundo': FloorComponent = <SegundoAndar />; break;
-    case 'terceiro': FloorComponent = <TerceiroAndar />; break;
-    default: FloorComponent = <Terreo />;
+    case 'subsolo': FloorComponent = <Subsolo onRoomClick={setModalRoom} />; break;
+    case 'terreo': FloorComponent = <Terreo onRoomClick={setModalRoom} />; break;
+    case 'primeiro': FloorComponent = <PrimeiroAndar onRoomClick={setModalRoom} />; break;
+    case 'segundo': FloorComponent = <SegundoAndar onRoomClick={setModalRoom} />; break;
+    case 'terceiro': FloorComponent = <TerceiroAndar onRoomClick={setModalRoom} />; break;
+    default: FloorComponent = <Terreo onRoomClick={setModalRoom} />;
   }
 
   return (
@@ -412,12 +485,14 @@ export default function MapaPage() {
                 {f === 'primeiro' ? '1º Andar'
                   : f === 'segundo' ? '2º Andar'
                     : f === 'terceiro' ? '3º Andar'
-                      : f.charAt(0).toUpperCase() + f.slice(1)}
+                      : f === 'terreo' ? 'Térreo'
+                        : f.charAt(0).toUpperCase() + f.slice(1)}
               </button>
             ))}
           </nav>
         </div>
         {FloorComponent}
+        <Modal room={modalRoom} onClose={() => setModalRoom(null)} />
       </div>
     </Layout>
   );
