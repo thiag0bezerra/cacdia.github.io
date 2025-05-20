@@ -1,3 +1,4 @@
+
 /*
  * Estilos para seleção de andar no mapa
  */
@@ -119,4 +120,165 @@
 
 .mapa-sala[data-type="generico"]:hover {
   filter: brightness(0.85) saturate(1.05);
+}
+
+/* Estilos para exibir a lista de disciplinas do SACI */
+.saci-classes-list {
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(36, 80, 120, 0.12);
+  padding: 6px 8px;
+  margin-top: 2px;
+  max-width: 220px;
+  overflow: hidden;
+}
+
+.saci-class-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.saci-class-item:last-child {
+  border-bottom: none;
+}
+
+.saci-class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.saci-class-nome {
+  font-weight: 600;
+  color: #2393d5;
+  font-size: 0.8em;
+  flex: 1;
+}
+
+.saci-class-codigo {
+  font-size: 0.7em;
+  color: #666;
+  font-weight: 500;
+}
+
+.saci-class-docente {
+  color: #444;
+  font-size: 0.75em;
+  margin-bottom: 2px;
+}
+
+.saci-class-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.saci-class-horario {
+  color: #666;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.saci-class-alunos {
+  color: #777;
+  font-size: 0.65em;
+  background: #f0f5f9;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.saci-class-pcd {
+  color: #fff;
+  font-size: 0.6em;
+  background: #2393d5;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.saci-class-depto {
+  color: #888;
+  font-size: 0.65em;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.saci-class-etc {
+  color: #b81f2d;
+  font-size: 0.75em;
+  text-align: right;
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saci-class-capacidade {
+  color: #555;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Novos estilos para acessibilidade */
+.mapa-sala-acessivel {
+  position: relative;
+}
+
+.mapa-sala-acessivel::after {
+  content: "♿";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 0.8rem;
+  color: #2393d5;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip para salas com PCD */
+.saci-tooltip {
+  position: absolute;
+  background: rgba(35, 147, 213, 0.95);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.mapa-sala:hover .saci-tooltip {
+  opacity: 1;
+}
+
+/* Badge para indicar salas com PCD */
+.saci-pcd-badge {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: #0066cc;
+  color: white;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
