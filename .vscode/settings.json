@@ -1,12 +1,9 @@
 {
-  // Ativa o Agent mode (requer VS Code ≥1.99)
   "chat.agent.enabled": true,
-  // Descobre automaticamente servidores MCP já configurados em outras ferramentas
   "chat.mcp.discovery.enabled": true,
-  // Permite que o agente execute tasks definidas em tasks.json
   "github.copilot.chat.agent.runTasks": true,
-  // Número máximo de solicitações que o agente pode fazer em uma sessão
-  "chat.agent.maxRequests": 100,
-  // Habilita pesquisa de arquivos baseada em código para melhorar o contexto em edit mode
-  "github.copilot.chat.codesearch.enabled": true
+  "chat.agent.maxRequests": 100,  
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.fixes": true
 }
