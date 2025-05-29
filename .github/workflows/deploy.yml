@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # trocado de main para master
+      - master
 
 jobs:
   build:
