@@ -17,3 +17,4 @@ applyTo: '**'
 - Utilize [sidebars.ts](./sidebars.ts) para compreender a configuração das barras laterais do docusaurus
 - Utilize [package.json](./package.json) para compreender as dependências do projeto
 - Utilize [tsconfig.json](./tsconfig.json) para compreender a configuração do TypeScript
+- Utilize "https://github.com/cacdia/cacdia.github.io.git" como upstream
