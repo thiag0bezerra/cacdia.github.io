@@ -1,9 +1,39 @@
 {
+  "files.encoding": "utf8",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.eol": "\n",
+  // Melhorias de produtividade
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": false,
+  "editor.hover.enabled": true,
+  "editor.acceptSuggestionOnEnter": "smart",
   "chat.agent.enabled": true,
   "chat.mcp.discovery.enabled": true,
   "github.copilot.chat.agent.runTasks": true,
-  "chat.agent.maxRequests": 100,  
+  "chat.agent.maxRequests": 100,
   "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.agent.autoFix": true,
+  "github.copilot.advanced": {
+    "useLanguageServer": true
+  },
+  "github.copilot.chat.reviewSelection.enabled": true,
+  "chat.extensionTools.enabled": true,
+  "github.copilot.chat.search.semanticTextResults": true,
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true
+  },
+  "chat.promptFilesLocations": {
+    ".github/prompts": true
+  },
   "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.nextEditSuggestions.fixes": true
+  "github.copilot.nextEditSuggestions.fixes": true,
+  "github.copilot.chat.summarizeAgentConversationHistory.enabled": true,
 }
