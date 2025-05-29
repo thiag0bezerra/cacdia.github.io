@@ -27,7 +27,7 @@ Siga rigorosamente as seguintes etapas para manter seu fork ou clone sempre alin
    Compare o que mudou no upstream em relação à sua branch local
 
    `git checkout <branch>`
-   `git diff <branch> upstream/<branch>`
+   `git --no-pager diff <branch> upstream/<branch>`
 
    — Assim você vê arquivos acrescentados, modificados ou excluídos antes de aplicar qualquer atualização.
 
