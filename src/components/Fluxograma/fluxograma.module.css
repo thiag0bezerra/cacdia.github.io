@@ -1,0 +1,169 @@
+/*
+ * Estilos minimalistas para o fluxograma acadêmico
+ * Revisado: removido blur e opacidade para visual mais limpo e profissional
+ * Migrado de styles.css para CSS Modules
+ */
+
+.flowchartContainer {
+  width: 100%;
+  position: relative;
+}
+
+.flowchartScrollArea {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.periodsContainer {
+  display: flex;
+  gap: 8px;
+  padding: 8px 4px;
+  min-width: max-content;
+}
+
+.selectionInfo {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: 1000;
+  background-color: var(--ifm-background-surface-color);
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--ifm-color-emphasis-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.clearButton:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+.periodColumn {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  min-width: 180px;
+  gap: 8px;
+}
+
+.periodHighlighted {
+  opacity: 1;
+}
+
+.periodHeader {
+  padding: 8px 0;
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+}
+
+.periodHeaderTitle {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.periodDisciplines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.disciplineCard {
+  padding: 8px 10px;
+  border: 1.5px solid var(--ifm-color-emphasis-500);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s, opacity 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.hasSelection .disciplineCard:not(.disciplineSelected):not(.disciplinePrerequisite):not(.disciplineDependent) {
+  opacity: 0.5;
+  filter: grayscale(20%);
+}
+
+/* Os estados abaixo devem ser aplicados via className condicional */
+.disciplineCard:hover {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.disciplineSelected {
+  border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary-lightest);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+
+.disciplinePrerequisite {
+  border-color: var(--ifm-color-warning);
+  background-color: #fffbe6;
+}
+
+.disciplineDependent {
+  border-color: var(--ifm-color-success);
+  background-color: #e6fff2;
+}
+
+.disciplineNoPrerequisites {
+  opacity: 0.92;
+}
+
+.disciplineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.disciplineCode {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin-right: 6px;
+}
+
+.disciplineCredits {
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.disciplineTitle {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 2px 0;
+}
+
+.disciplinePrerequisites {
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.prereqCount {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .periodColumn {
+    min-width: 140px;
+    width: 140px;
+  }
+  .flowchartContainer {
+    font-size: 13px;
+  }
+}
