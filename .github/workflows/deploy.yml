@@ -7,23 +7,26 @@ on:
 
 jobs:
   build:
+    # Só roda o build se estivermos no repo original
+    if: ${{ github.repository == 'cacdia/cacdia.github.io' }}
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Instala o pnpm para podermos usá-lo
-      - uses: pnpm/action-setup@v4       # versão recomendada no Marketplace :contentReference[oaicite:0]{index=0}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
           version: latest
 
-      # Configura o Node.js 18 e ativa cache para pnpm
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js 20 + cache pnpm
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'                   # habilita cache de dependências pnpm :contentReference[oaicite:1]{index=1}
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -37,8 +40,11 @@ jobs:
           path: build
 
   deploy:
+    # Garante que o deploy só aconteça no repo original
+    if: ${{ github.repository == 'cacdia/cacdia.github.io' }}
     name: Deploy to GitHub Pages
     needs: build
+    runs-on: ubuntu-latest
 
     permissions:
       pages: write
@@ -48,7 +54,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
