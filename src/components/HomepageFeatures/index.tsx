@@ -12,33 +12,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Comunidade Colaborativa',
     Icon: require('@site/static/img/juntos.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Conectamos alunos, veteranos e professores do curso de CDIA,
+        promovendo troca de conhecimentos e experiências para fortalecer
+        a jornada acadêmica de toda a comunidade.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Manual do Aluno',
     Icon: require('@site/static/img/avante.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Guia completo com FAQ, processos administrativos, orientações
+        práticas e tudo que você precisa para navegar pela vida acadêmica
+        no Centro de Informática da UFPB.
       </>
     ),
   },
   {
-    title: 'Charts Support',
-    // agora suportando PNG também
+    title: 'Recursos Interativos',
     Icon: require('@site/static/img/graficos.png').default,
     description: (
       <>
-        Exemplo de suporte a imagens PNG ou JPG, basta informar o path da
-        imagem no require.
+        Fluxograma interativo da grade curricular, mapa navegável do CI
+        e visualizações que facilitam o planejamento acadêmico e a
+        localização no campus.
       </>
     ),
   },
