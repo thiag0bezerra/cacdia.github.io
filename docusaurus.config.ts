@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://cacdia.github.io',
+  url: 'http://cacdia.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -80,7 +80,7 @@ const config: Config = {
           sidebarId: 'manualSidebar',
           position: 'left',
           label: 'Manual do Aluno',
-        },        
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -112,16 +112,8 @@ const config: Config = {
           title: 'Comunidade',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              to: 'https://discord.gg/3JWBGQWUbD',
             },
           ],
         },
@@ -136,10 +128,35 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/cacdia/cacdia.github.io',
             },
+            {
+              label: 'HuggingFace',
+              href: 'https://huggingface.co/cacdia',
+            },
+          ],
+        },
+        {
+          title: 'Redes',
+          items: [
+            {
+              label: 'Instagram',
+              href: 'https://instagram.com/cacdia',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/cacdia',
+            },
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/@cacdia',
+            },
+            {
+              label: 'E-mail',
+              href: 'mailto:ca@cdia.ci.ufpb.br',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CACDIA`,
     },
     prism: {
       theme: prismThemes.github,
