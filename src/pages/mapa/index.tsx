@@ -252,7 +252,7 @@ const Path: React.FC<PathProps & { onRoomClick?: (room: any) => void }> = props 
             }
           }
         }}
-        style={{ cursor: (props.title && getSaciRoomInfo(props.title)?.classes?.length > 0) ? 'pointer' : undefined }}
+        style={{ cursor: (props.title && (getSaciRoomInfo(props.title)?.classes?.length ?? 0) > 0) ? 'pointer' : undefined }}
       />
       <g transform={calculateTransform(cx, cy, ICON_SIZE, ICON_SIZE, iconScale)}>
         {icone}
