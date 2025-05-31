@@ -7,6 +7,10 @@ tags: [cacdia, cdia, ufpb]
 
 #### Olá, pessoal!
 
+Bem vindos!
+
+<!-- truncate -->
+
 Eu sou Thiago Bezerra, estudante do Centro de Informática da UFPB, e é com uma mistura de entusiasmo e responsabilidade que escrevo o primeiro post do blog do **CACDIA** — o Centro Acadêmico de Ciência de Dados e Inteligência Artificial. Este espaço, hospedado em **cacdia.github.io**, nasce como um ponto de encontro para quem vive, estuda ou simplesmente se interessa por Ciência de Dados e IA dentro (e fora) da nossa universidade.
 
 A experiência universitária é intensa. Entre aulas, projetos e estágios, vivemos desafios que só quem está na pele compreende. Nada mais natural, então, que criemos um ambiente em que possamos registrar essas vivências, trocar aprendizados e apoiar quem chega depois de nós. A ideia é simples: se aprendemos algo na marra, que o próximo não precise passar pelo mesmo sufoco.
