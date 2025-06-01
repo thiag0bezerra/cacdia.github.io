@@ -11,7 +11,7 @@ Esta seção contém respostas para as perguntas mais comuns que os alunos têm 
 
 ### "Trancar diminui o CRA?"
 
-Não, o trancamento de disciplina ou de período não afeta o cálculo do Coeficiente de Rendimento Acadêmico (CRA). 
+De acordo com o Regulamento Geral de Graduação (Resolução nº 29/2020), o trancamento de disciplina ou de período não afeta o cálculo do Coeficiente de Rendimento Acadêmico (CRA).
 - Disciplinas trancadas não são contabilizadas no cálculo
 - Ao trancar uma disciplina, ela aparecerá no histórico com a situação "TRANCADO", mas sem nota ou efeito no CRA
 - O trancamento parcial (de disciplinas individuais) ou total (de todo o período) tem o mesmo efeito neutro no CRA

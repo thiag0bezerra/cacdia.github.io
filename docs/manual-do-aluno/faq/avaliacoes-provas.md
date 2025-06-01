@@ -37,10 +37,10 @@ O formato das provas varia significativamente entre professores:
 
 As avaliações finais (exames) seguem estas características gerais:
 
-- De acordo com a Resolução CONSEPE nº 16/2015, o exame final abrange todo o conteúdo do semestre
+- De acordo com a Resolução nº 29/2020, o exame final abrange todo o conteúdo do semestre
 - O aluno precisará obter nota suficiente para atingir média 5,0 considerando sua média parcial
-- A fórmula para aprovação após o exame é: (Média parcial × 6 + Nota do exame × 4) / 10 ≥ 5,0 (Res. CONSEPE nº 16/2015)
-- Somente alunos com média parcial entre 4,0 e 6,9 têm direito ao exame final (Res. CONSEPE nº 16/2015)
+- A fórmula para aprovação após o exame é: (Média parcial × 6 + Nota do exame × 4) / 10 ≥ 5,0 (Resolução nº 29/2020)
+- Somente alunos com média parcial entre 4,0 e 6,9 têm direito ao exame final (Resolução nº 29/2020)
 - Não há reposição de exame final
 
 **Especificidades por disciplina:**
@@ -84,10 +84,10 @@ Alterações de datas podem ocorrer por motivos diversos (feriados, eventos inst
 
 ### "Como solicitar revisão de nota?"
 
-De acordo com o Regulamento Geral de Graduação (Resolução CONSEPE nº 16/2015):
+De acordo com o Regulamento Geral de Graduação (Resolução CONSEPE nº 29/2020):
 
 **Prazo para solicitar revisão:**
-- Até 3 dias úteis após a publicação da nota no SIGAA (Res. CONSEPE nº 16/2015)
+- Até 3 dias úteis após a publicação da nota no SIGAA (Res. CONSEPE nº 29/2020)
 
 **Procedimento para solicitar revisão:**
 1. Faça um requerimento fundamentado à Coordenação do Curso
@@ -105,7 +105,7 @@ Sempre solicite cópia da avaliação ao professor para fundamentar adequadament
 
 ### "Como solicitar segunda chamada de prova?"
 
-De acordo com o Regulamento Geral de Graduação (Resolução CONSEPE nº 16/2015, Art. 36):
+De acordo com o Regulamento Geral de Graduação (Resolução CONSEPE nº 29/2020, Art. 36):
 
 **Regras para segunda chamada:**
 - O discente tem direito a uma única avaliação de reposição (segunda chamada) por disciplina, por período letivo (Regulamento Geral de Graduação, Art. 36)
